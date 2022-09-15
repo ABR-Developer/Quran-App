@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/book"
+            android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/nav_search_ayah"
+            android:icon="@drawable/laptop"
+            android:title="@string/menu_search_ayah"/>
+
+    </group>
+
+
+    <item android:title="@string/menu_section_reading">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_read"
+                    android:icon="@drawable/back"
+                    android:title="@string/menu_read_quran" />
+                <item
+                    android:id="@+id/nav_read_by_parah"
+                    android:icon="@drawable/laptop"
+                    android:title="@string/menu_read_quran_by_parah" />
+                <item
+                    android:id="@+id/nav_read_by_surah"
+                    android:icon="@drawable/voice"
+                    android:title="@string/menu_read_quran_by_surah" />
+            </group>
+        </menu>
+    </item>
+
+    <item android:title="Comments">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/Nav_add_comment"
+                    android:icon="@drawable/add_comment"
+                    android:title="Add Comment" />
+                <item
+                    android:id="@+id/nav_insert_comment"
+                    android:icon="@drawable/insert_comment"
+                    android:title="Insert Comment" />
+            </group>
+        </menu>
+    </item>
+
+</menu>

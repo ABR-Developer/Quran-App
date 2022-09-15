@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Quran App</string>
+    <string name="nav__header_image">Header image</string>
+    <string name="nav__header_main_text">Al-Quran</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_read_quran">Read</string>
+    <string name="menu_read_quran_by_parah">Read by Parah</string>
+    <string name="menu_read_quran_by_surah">Read by Surah</string>
+    <string name="menu_search_ayah">Search ayah</string>
+    <string name="menu_section_reading">Reading</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="Arabic_Text">عربي</string>
+    <string name="Urdu_Text">اردو</string>
+    <string name="English_text">English</string>
+</resources>
