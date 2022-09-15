@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReadAyah"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/read_ayah_arabic"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Arabic_Text"
+        android:textAlignment="viewEnd"
+        android:textSize="28sp"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/Urdu_Text"
+        android:textAlignment="viewEnd"
+        android:textSize="24sp"
+        tools:ignore="TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/English_text"
+        android:textSize="24sp"
+        tools:ignore="TextContrastCheck,TextContrastCheck" />
+</LinearLayout>

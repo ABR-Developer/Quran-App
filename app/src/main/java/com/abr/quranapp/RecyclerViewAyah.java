@@ -1,15 +1,14 @@
 package com.abr.quranapp;
 
-import android.os.Bundle;
-
 import androidx.appcompat.app.AppCompatActivity;
 
-public class custom_list_view_search extends AppCompatActivity {
+import android.os.Bundle;
+
+public class RecyclerViewAyah extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_custom_list_view_search);
+        setContentView(R.layout.activity_recycler_view_ayah);
     }
-
 }

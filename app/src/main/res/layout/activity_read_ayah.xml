@@ -6,7 +6,7 @@
     android:id="@+id/drawer"
     tools:openDrawer="start"
     android:layout_height="match_parent"
-    tools:context=".ReadQuran">
+    tools:context=".ReadAyah">
 
     <RelativeLayout
         android:layout_width="wrap_content"

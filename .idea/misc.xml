@@ -7,12 +7,21 @@
         <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/font/font.xml" value="0.25" />
         <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_ayah.xml" value="0.28125" />
         <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_custom_list_view_ayah.xml" value="0.1" />
-        <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_custom_list_view_surah_name.xml" value="0.1" />
+        <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_custom_list_view_search.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_custom_list_view_surah_name.xml" value="0.22" />
+        <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_custom_read_ayah_list.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_custom_read_parah_list.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_custom_read_quran_list.xml" value="0.20572916666666666" />
+        <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_custom_read_surah_list.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_main.xml" value="0.20572916666666666" />
         <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_read.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_read_ayah.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_read_parah.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_read_quran.xml" value="0.18" />
+        <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_read_surah.xml" value="0.21979166666666666" />
+        <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_recycler_view_ayah.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/activity_search_function.xml" value="0.1" />
+        <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/byname_list.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/layout/header.xml" value="0.21979166666666666" />
         <entry key="..\:/Users/abr35/AndroidStudioProjects/QuranApp/app/src/main/res/menu/main_menu.xml" value="0.21979166666666666" />
       </map>

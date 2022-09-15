@@ -13,4 +13,7 @@
     <string name="Arabic_Text">عربي</string>
     <string name="Urdu_Text">اردو</string>
     <string name="English_text">English</string>
+    <string name="Parah_no">Parah Number</string>
+    <string name="Surah_no">Surah Number</string>
+    <string name="Ayah_no">Ayah Number</string>
 </resources>

@@ -6,7 +6,7 @@
     android:id="@+id/drawer"
     tools:openDrawer="start"
     android:layout_height="match_parent"
-    tools:context=".ReadQuran">
+    tools:context=".ReadSurah">
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -21,7 +21,7 @@
             app:titleTextColor="@color/cardview_light_background" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/read_ayah_recyclerView"
+            android:id="@+id/read_surah_recyclerView"
             android:layout_width="381dp"
             android:layout_height="654dp"
             android:layout_below="@+id/toolbar"

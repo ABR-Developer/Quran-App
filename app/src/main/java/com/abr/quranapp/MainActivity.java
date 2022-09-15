@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         toolbar = findViewById(R.id.toolbar);
-//        setSupportActionBar(toolbar);
+        setSupportActionBar(toolbar);
 
         navigationView=findViewById(R.id.nav_view);
         drawerLayout=findViewById(R.id.drawer);
@@ -65,17 +65,17 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"Return is Clicked",Toast.LENGTH_LONG).show();
 //                        Intent intent = new Intent(MainActivity.this, BookActivity.class);
 //                        startActivity(intent);
-//                        drawerLayout.closeDrawer(GravityCompat.START);
+                        drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.nav_search_ayah:
                         Toast.makeText(getApplicationContext(),"Search Ayah clicked",Toast.LENGTH_LONG).show();
-                        drawerLayout.closeDrawer(GravityCompat.START);
+//                        drawerLayout.closeDrawer(GravityCompat.START);
                         break;
 
                     case R.id.nav_read:
-                        Intent intent = new Intent(MainActivity.this, ReadQuran.class);
-                        startActivity(intent);
+//                        Intent intent = new Intent(MainActivity.this, ReadQuran.class);
+//                        startActivity(intent);
 
                         Toast.makeText(getApplicationContext(),"Read clicked",Toast.LENGTH_LONG).show();
 //                        drawerLayout.closeDrawer(GravityCompat.START);
