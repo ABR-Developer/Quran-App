@@ -66,12 +66,6 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(intent);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
-                    case R.id.nav_search_ayah:
-                        Toast.makeText(getApplicationContext(),"Home to Search Ayah",Toast.LENGTH_LONG).show();
-//                        intent = new Intent(MainActivity.this, SearchAyah.class);
-//                        startActivity(intent);
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
                     case R.id.nav_read:
                         Toast.makeText(getApplicationContext(),"Home to Read",Toast.LENGTH_SHORT).show();
                         intent = new Intent(MainActivity.this, ReadQuran.class);

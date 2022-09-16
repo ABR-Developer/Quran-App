@@ -71,12 +71,6 @@ public class ReadQuran extends AppCompatActivity {
                         startActivity(intent);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
-                    case R.id.nav_search_ayah:
-                        Toast.makeText(getApplicationContext(),"Read Quran to Search Ayah",Toast.LENGTH_LONG).show();
-//                        intent = new Intent(ReadSurah.this, SearchAyah.class);
-//                        startActivity(intent);
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
                     case R.id.nav_read:
                         Toast.makeText(getApplicationContext(),"Read Quran to Read Quran",Toast.LENGTH_SHORT).show();
                         intent = new Intent(ReadQuran.this, ReadQuran.class);

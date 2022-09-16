@@ -67,12 +67,6 @@ public class ReadParah extends AppCompatActivity {
                         startActivity(intent);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
-                    case R.id.nav_search_ayah:
-                        Toast.makeText(getApplicationContext(),"Read Parah to Search Ayah",Toast.LENGTH_LONG).show();
-//                        intent = new Intent(ReadSurah.this, SearchAyah.class);
-//                        startActivity(intent);
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
                     case R.id.nav_read:
                         Toast.makeText(getApplicationContext(),"Read Parah to Read Quran",Toast.LENGTH_SHORT).show();
                         intent = new Intent(ReadParah.this, ReadQuran.class);

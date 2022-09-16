@@ -16,9 +16,6 @@
             android:name=".ReadQuran"
             android:exported="false" />
         <activity
-            android:name=".SearchAyah"
-            android:exported="false" />
-        <activity
             android:name=".ReadSurah"
             android:exported="false" />
         <activity
