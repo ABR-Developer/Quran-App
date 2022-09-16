@@ -3,15 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ReadParah"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:background="#FFC107"
+    android:orientation="vertical"
+    android:paddingLeft="2dp"
+    android:paddingTop="2dp"
+    android:paddingRight="2dp"
+    tools:context=".ReadParah">
 
     <TextView
         android:id="@+id/read_parah_number"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
         android:hint="@string/Parah_no"
-        android:textSize="28sp"
+        android:textColor="#FF5722"
+        android:textSize="24sp"
+        android:textStyle="bold"
         tools:ignore="TextContrastCheck" />
 </LinearLayout>

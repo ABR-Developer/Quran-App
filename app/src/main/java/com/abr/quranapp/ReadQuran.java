@@ -14,21 +14,15 @@ import android.content.Intent;
 import android.database.SQLException;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ListView;
 import android.widget.Toast;
 
 import com.google.android.material.navigation.NavigationView;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ReadQuran extends AppCompatActivity {
-
-    RecyclerView recyclerViewAyah;
-    AyahRecyclerViewAdapter ayahRecyclerViewAdapter;
-    ArrayList<String> ayahArabic;
-    ArrayList<String> ayahUrdu;
-
     NavigationView navigationView;
     DrawerLayout drawerLayout;
     Toolbar toolbar;
@@ -46,18 +40,65 @@ public class ReadQuran extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("NewApi")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_read_quran);
 
-        recyclerViewAyah = findViewById(R.id.recyclerViewAyah);
-        recyclerViewAyah.setHasFixedSize(true);
-        recyclerViewAyah.setLayoutManager(new LinearLayoutManager(this));
+        toolbar = findViewById(R.id.ReadQuranToolbar);
+//        setSupportActionBar(toolbar);
 
-        Intent intent = getIntent();
-        int index=Integer.parseInt(intent.getStringExtra("surahIndex"));
-        Toast.makeText(this, "Index: " + index, Toast.LENGTH_SHORT).show();
+        navigationView=findViewById(R.id.ReadQuran_nav);
+        drawerLayout=findViewById(R.id.ReadQuranDrawer);
+
+        toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+
+            @SuppressLint("NonConstantResourceId")
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
+            {
+                Intent intent;
+                switch (menuItem.getItemId())
+                {
+                    case R.id.nav_home :
+                        Toast.makeText(getApplicationContext(),"Read Quran to Home",Toast.LENGTH_LONG).show();
+                        intent = new Intent(ReadQuran.this, MainActivity.class);
+                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.nav_search_ayah:
+                        Toast.makeText(getApplicationContext(),"Read Quran to Search Ayah",Toast.LENGTH_LONG).show();
+//                        intent = new Intent(ReadSurah.this, SearchAyah.class);
+//                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.nav_read:
+                        Toast.makeText(getApplicationContext(),"Read Quran to Read Quran",Toast.LENGTH_SHORT).show();
+                        intent = new Intent(ReadQuran.this, ReadQuran.class);
+                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.nav_read_by_parah:
+                        Toast.makeText(getApplicationContext(),"Read Quran to Read Parah",Toast.LENGTH_LONG).show();
+                        intent = new Intent(ReadQuran.this, ReadParah.class);
+                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.nav_read_by_surah:
+                        Toast.makeText(getApplicationContext(),"Read Quran to Read Surah",Toast.LENGTH_LONG).show();
+                        intent = new Intent(ReadQuran.this, ReadSurah.class);
+                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                }
+                return true;
+            }
+        });
 
         DBMain db = new DBMain(getApplicationContext());
         try {
@@ -70,87 +111,35 @@ public class ReadQuran extends AppCompatActivity {
         } catch (SQLException sqle) {
             throw sqle;
         }
-        db.DBAyahs(index);
 
-        ayahArabic = new ArrayList<>();
-        ayahUrdu = new ArrayList<>();
+        Intent i = getIntent();
+        int index;
+        String type = i.getStringExtra("type");
+        if(Objects.equals(type, "surah"))
+        {
+            index = Integer.parseInt(i.getStringExtra("index"));
+            db.ReadAyahBySurahId(index);
+            Toast.makeText(this, "Surah" + Integer.toString(index), Toast.LENGTH_SHORT).show();
+        }
+        else if(Objects.equals(type, "parah"))
+        {
+            index = Integer.parseInt(i.getStringExtra("index"));
+            db.ReadAyahByParahId(index);
+            Toast.makeText(this, "Parah" + Integer.toString(index), Toast.LENGTH_SHORT).show();
+        }
+        else{
+            db.ReadWholeQuran();
+            Toast.makeText(this, "Whole" + type, Toast.LENGTH_SHORT).show();
+        }
 
-        ayahArabic = db.getAyahsArabic();
-        ayahUrdu = db.getAyahsUrdu();
+        ArrayList<String> arabic = db.getAyahsArabic();
+        ArrayList<String> urdu = db.getAyahsUrdu();
+        ArrayList<String> english = db.getAyahsEnglish();
 
-        ayahRecyclerViewAdapter = new AyahRecyclerViewAdapter(this,ayahArabic,ayahUrdu);
-        recyclerViewAyah.setAdapter(ayahRecyclerViewAdapter);
-
-//        ArrayList<String> data = db.AyahsArabic;
-//        Toast.makeText(this,data.get(0),Toast.LENGTH_SHORT).show();
-//
-//        int size = data.size()/3;
-//        String[] arabic = new String[size];
-//        String[] urdu = new String[size];
-//        String[] english = new String[size];
-//        for(int i = 0; i < data.size() ; i++)
-//        {
-//            arabic[i] = data.get(i);
-//            urdu[i] = data.get(i+1);
-//            english[i] = data.get(i+2);
-//            i++;
-//            i++;
-//        }
-//
-//        ListView listView = findViewById(R.id.read_quran_list);
-//        CustomAdapterReadQuran customArrayAdapter=new CustomAdapterReadQuran(this,arabic,urdu,english);
-//        listView.setAdapter(customArrayAdapter);
-
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        navigationView=findViewById(R.id.nav_view);
-        drawerLayout=findViewById(R.id.drawer);
-
-        toggle=new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open,R.string.close);
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
-
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-
-            @SuppressLint("NonConstantResourceId")
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
-            {
-                switch (menuItem.getItemId())
-                {
-                    case R.id.nav_home :
-                        Toast.makeText(getApplicationContext(),"Return is Clicked",Toast.LENGTH_LONG).show();
-//                        Intent intent = new Intent(MainActivity.this, BookActivity.class);
-//                        startActivity(intent);
-                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
-
-                    case R.id.nav_search_ayah:
-                        Toast.makeText(getApplicationContext(),"Search Ayah clicked",Toast.LENGTH_LONG).show();
-//                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
-
-                    case R.id.nav_read:
-//                        Intent intent = new Intent(MainActivity.this, ReadQuran.class);
-//                        startActivity(intent);
-
-                        Toast.makeText(getApplicationContext(),"Read clicked",Toast.LENGTH_LONG).show();
-//                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
-
-                    case R.id.nav_read_by_parah:
-                        Toast.makeText(getApplicationContext(),"Read by Parah clicked",Toast.LENGTH_LONG).show();
-//                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
-
-                    case R.id.nav_read_by_surah:
-                        Toast.makeText(getApplicationContext(),"Read by Surah clicked",Toast.LENGTH_LONG).show();
-//                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
-                }
-                return true;
-            }
-        });
+        RecyclerView recyclerView = findViewById(R.id.read_quran_recyclerView);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        RecyclerViewAdapterReadQuran recyclerViewAdapter = new RecyclerViewAdapterReadQuran(this,arabic,urdu, english);
+        recyclerView.setAdapter(recyclerViewAdapter);
     }
 }

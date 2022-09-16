@@ -1,9 +1,8 @@
 package com.abr.quranapp;
 
 import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
+import android.database.SQLException;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.widget.Toast;
@@ -17,10 +16,9 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
-import java.util.ArrayList;
+import java.io.IOException;
 
 public class MainActivity extends AppCompatActivity {
-
     NavigationView navigationView;
     DrawerLayout drawerLayout;
     Toolbar toolbar;
@@ -44,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+//        setSupportActionBar(toolbar);
 
         navigationView=findViewById(R.id.nav_view);
         drawerLayout=findViewById(R.id.drawer);
@@ -59,40 +57,44 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem)
             {
+                Intent intent;
                 switch (menuItem.getItemId())
                 {
                     case R.id.nav_home :
-                        Toast.makeText(getApplicationContext(),"Return is Clicked",Toast.LENGTH_LONG).show();
-//                        Intent intent = new Intent(MainActivity.this, BookActivity.class);
+                        Toast.makeText(getApplicationContext(),"Home to Home",Toast.LENGTH_LONG).show();
+                        intent = new Intent(MainActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        break;
+                    case R.id.nav_search_ayah:
+                        Toast.makeText(getApplicationContext(),"Home to Search Ayah",Toast.LENGTH_LONG).show();
+//                        intent = new Intent(MainActivity.this, SearchAyah.class);
 //                        startActivity(intent);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
-
-                    case R.id.nav_search_ayah:
-                        Toast.makeText(getApplicationContext(),"Search Ayah clicked",Toast.LENGTH_LONG).show();
-//                        drawerLayout.closeDrawer(GravityCompat.START);
-                        break;
-
                     case R.id.nav_read:
-//                        Intent intent = new Intent(MainActivity.this, ReadQuran.class);
-//                        startActivity(intent);
-
-                        Toast.makeText(getApplicationContext(),"Read clicked",Toast.LENGTH_LONG).show();
-//                        drawerLayout.closeDrawer(GravityCompat.START);
+                        Toast.makeText(getApplicationContext(),"Home to Read",Toast.LENGTH_SHORT).show();
+                        intent = new Intent(MainActivity.this, ReadQuran.class);
+                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
                         break;
-
                     case R.id.nav_read_by_parah:
-                        Toast.makeText(getApplicationContext(),"Read by Parah clicked",Toast.LENGTH_LONG).show();
-//                        drawerLayout.closeDrawer(GravityCompat.START);
+                        Toast.makeText(getApplicationContext(),"Home to Read by Parah",Toast.LENGTH_LONG).show();
+                        intent = new Intent(MainActivity.this, ReadParah.class);
+                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
                         break;
-
                     case R.id.nav_read_by_surah:
-                        Toast.makeText(getApplicationContext(),"Read by Surah clicked",Toast.LENGTH_LONG).show();
-//                        drawerLayout.closeDrawer(GravityCompat.START);
+                        Toast.makeText(getApplicationContext(),"Home to Read by Surah",Toast.LENGTH_LONG).show();
+                        intent = new Intent(MainActivity.this, ReadSurah.class);
+                        startActivity(intent);
+                        drawerLayout.closeDrawer(GravityCompat.START);
                         break;
                 }
                 return true;
             }
         });
+
+
     }
 }

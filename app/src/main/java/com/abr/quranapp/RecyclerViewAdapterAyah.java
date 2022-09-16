@@ -28,7 +28,7 @@ public class RecyclerViewAdapterAyah extends RecyclerView.Adapter <RecyclerViewA
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_custom_read_quran_list,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_custom_list_view_ayah,parent,false);
         return new ViewHolder(view);
     }
 
@@ -55,9 +55,9 @@ public class RecyclerViewAdapterAyah extends RecyclerView.Adapter <RecyclerViewA
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            AyahArabic = itemView.findViewById(R.id.read_arabic_text);
-            AyahUrdu = itemView.findViewById(R.id.read_urdu_text);
-            AyahEnglish = itemView.findViewById(R.id.read_english_text);
+            AyahArabic = itemView.findViewById(R.id.read_ayah_arabic);
+            AyahUrdu = itemView.findViewById(R.id.read_ayah_urdu);
+            AyahEnglish = itemView.findViewById(R.id.read_ayah_english);
         }
     }
 }

@@ -3,33 +3,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ReadQuran"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:background="#F44336"
+    android:orientation="vertical"
+    android:paddingLeft="2dp"
+    android:paddingTop="2dp"
+    android:paddingRight="2dp"
+    tools:context=".ReadQuran">
 
     <TextView
         android:id="@+id/read_arabic_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:padding="2dp"
         android:text="@string/Arabic_Text"
         android:textAlignment="viewEnd"
-        android:textSize="28sp" />
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/read_urdu_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:background="#FFFFFF"
+        android:padding="2dp"
         android:text="@string/Urdu_Text"
         android:textAlignment="viewEnd"
+        android:textColor="#0000FF"
         android:textSize="24sp" />
 
     <TextView
         android:id="@+id/read_english_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:background="#FFFFFF"
+        android:padding="2dp"
         android:text="@string/English_text"
+        android:textColor="#FF0000"
         android:textSize="24sp" />
 </LinearLayout>
 

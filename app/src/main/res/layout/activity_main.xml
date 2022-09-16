@@ -21,6 +21,17 @@
             android:background="@color/cardview_dark_background"
             />
 
+        <ImageView
+            android:id="@+id/main_background_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/toolbar"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="-56dp"
+            android:contentDescription="@string/appbar_scrolling_view_behavior"
+            app:srcCompat="@drawable/main_background"
+            tools:ignore="ImageContrastCheck" />
+
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView

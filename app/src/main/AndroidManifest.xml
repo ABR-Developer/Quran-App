@@ -10,37 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.QuranApp">
         <activity
-            android:name=".CustomReadAyahList"
-            android:exported="false" />
-        <activity
-            android:name=".ReadAyah"
-            android:exported="false" />
-        <activity
-            android:name=".RecyclerViewSurah"
-            android:exported="false" />
-        <activity
-            android:name=".RecyclerViewParah"
-            android:exported="false" />
-        <activity
-            android:name=".RecyclerViewAyah"
-            android:exported="false" />
-        <activity
-            android:name=".CustomReadSurahList"
-            android:exported="false" />
-        <activity
-            android:name=".CustomReadParahList"
-            android:exported="false" />
-        <activity
-            android:name=".ReadSurah"
-            android:exported="false" />
-        <activity
             android:name=".ReadParah"
             android:exported="false" />
         <activity
-            android:name=".CustomReadQuranList"
+            android:name=".ReadQuran"
             android:exported="false" />
         <activity
-            android:name=".ReadQuran"
+            android:name=".SearchAyah"
+            android:exported="false" />
+        <activity
+            android:name=".ReadSurah"
             android:exported="false" />
         <activity
             android:name=".Read"

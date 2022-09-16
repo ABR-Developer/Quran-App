@@ -3,29 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ReadSurah"
-    android:orientation="vertical">
-
-    <TextView
-        android:id="@+id/read_surah_name_id"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/read_suran_name_english"
-        android:layout_width="match_parent"
-        android:layout_height="54dp"
-        android:hint="@string/Surah_no" />
+    android:layout_height="wrap_content"
+    android:background="#9C27B0"
+    android:orientation="vertical"
+    android:paddingLeft="2dp"
+    android:paddingTop="2dp"
+    android:paddingRight="2dp"
+    tools:context=".ReadSurah">
 
     <TextView
         android:id="@+id/read_surah_name_urdu"
         android:layout_width="match_parent"
         android:layout_height="45dp"
-        android:text="TextView"
+        android:background="#FFFFFF"
+        android:hint="@string/Urdu_Text"
+        android:paddingBottom="2dp"
         android:textAlignment="viewEnd"
+        android:textColor="#0000FF"
+        android:textColorHint="#78909C"
+        android:textSize="28sp" />
+
+    <TextView
+        android:id="@+id/read_suran_name_english"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:background="#FFFFFF"
+        android:hint="@string/English_text"
+        android:paddingBottom="2dp"
+        android:textColor="#FF0000"
+        android:textColorHint="#78909C"
         android:textSize="24sp" />
 
 </LinearLayout>

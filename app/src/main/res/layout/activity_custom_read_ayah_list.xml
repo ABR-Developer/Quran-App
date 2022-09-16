@@ -3,33 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ReadAyah"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:background="#673AB7"
+    android:orientation="vertical"
+    android:paddingLeft="2dp"
+    android:paddingTop="2dp"
+    android:paddingRight="2dp"
+    tools:context=".ReadAyah">
 
     <TextView
         android:id="@+id/read_ayah_arabic"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:hint="@string/Arabic_Text"
+        android:paddingBottom="2dp"
         android:textAlignment="viewEnd"
         android:textSize="28sp"
+        android:textStyle="bold"
         tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/read_ayah_urdu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:hint="@string/Urdu_Text"
+        android:paddingBottom="2dp"
         android:textAlignment="viewEnd"
         android:textSize="24sp"
         tools:ignore="TextContrastCheck" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/read_ayah_english"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         android:hint="@string/English_text"
+        android:paddingBottom="2dp"
         android:textSize="24sp"
         tools:ignore="TextContrastCheck,TextContrastCheck" />
 </LinearLayout>

@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class RecyclerViewParah extends AppCompatActivity {
+public class SearchAyah extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recycler_view_parah);
+        setContentView(R.layout.activity_search_ayah);
     }
 }
